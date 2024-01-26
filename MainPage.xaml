@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CartaoVisitaDigitalMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            HorizontalOptions="Center">
+            <Image
+                Source="alexandre.jpg"
+                HeightRequest="200"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Fotografia de um programador" />
+
+            <Label
+                Text="{Binding Nome}"
+                Style="{StaticResource Headline}"
+                FontSize="24"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="{Binding Descricao}"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="14"
+                SemanticProperties.Description="A descrição do programador" />
+            <HorizontalStackLayout
+                    Padding="30,0"
+                    Spacing="25"
+                    HorizontalOptions="Center">
+                <Button 
+                    x:Name="InstagramBtn"
+                    ImageSource="instagram.png"
+                    HeightRequest="150"
+                    BackgroundColor="Transparent"
+                    Padding="0"
+                    BorderWidth="0"
+                    Clicked="InstagramBtn_Clicked"
+                    />
+                <Button
+                    x:Name="YoutubeBtn"
+                    ImageSource="youtube.png"
+                    HeightRequest="150"
+                    BackgroundColor="Transparent"
+                    Padding="0"
+                    BorderWidth="0"
+                    Clicked="YoutubeBtn_Clicked"
+                    />
+                <Button 
+                    x:Name="WhatsappBtn"
+                    ImageSource="whatsapp.png"
+                    HeightRequest="150"
+                    BackgroundColor="Transparent"
+                    Padding="0"
+                    BorderWidth="0"
+                    Clicked="WhatsappBtn_Clicked"
+                    />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
